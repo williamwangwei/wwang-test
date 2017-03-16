@@ -1,15 +1,22 @@
 package com.wwang.quartz;
+import java.util.List;
+import java.util.Set;
+
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.JobBuilder;
 import org.quartz.JobDetail;
 import org.quartz.JobKey;
 import org.quartz.Scheduler;
+import org.quartz.SchedulerException;
 import org.quartz.SchedulerFactory;
 import org.quartz.Trigger;
 import org.quartz.TriggerBuilder;
 import org.quartz.TriggerKey;
 import org.quartz.impl.StdSchedulerFactory;
+import org.quartz.impl.matchers.GroupMatcher;
+
+import com.fasterxml.jackson.core.FormatSchema;
 
 public class QuartzManager {
 	private static SchedulerFactory schedulerFactory = new StdSchedulerFactory();  
@@ -149,4 +156,22 @@ public class QuartzManager {
             throw new RuntimeException(e);  
         }  
     }  
+    
+    
+    public static void joblist(){
+    	 try {
+			Scheduler sched = schedulerFactory.getScheduler();
+			List<String> gNames = sched.getTriggerGroupNames();
+			for (String gName : gNames) {
+				GroupMatcher<JobKey> gm = GroupMatcher.jobGroupEquals(gName);
+				Set<JobKey> keys = sched.getJobKeys(gm);
+				for (JobKey jobKey : keys) {
+					System.out.println( "jobKey=====jobKey.getGroup()【"+jobKey.getGroup()+"】   jobKey.getName()=【"+ jobKey.getName()+"】" );
+				}
+			}
+		} catch (SchedulerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
+    }
 }
