@@ -1,4 +1,4 @@
-package com.wwang.factory;
+package com.wwang.model.factory;
 
 public class RepositoryFactoryTest {
 	

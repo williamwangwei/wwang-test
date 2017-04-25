@@ -1,4 +1,4 @@
-package com.wwang.decorate;
+package com.wwang.model.decorate;
 
 import java.util.ArrayList;
 import java.util.List;

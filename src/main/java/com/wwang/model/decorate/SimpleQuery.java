@@ -1,4 +1,4 @@
-package com.wwang.decorate;
+package com.wwang.model.decorate;
 
 /**
  * 简单查询，相当于直接查询数据库，这里直接返回Result，相当于是数据库

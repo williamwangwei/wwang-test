@@ -1,4 +1,4 @@
-package com.wwang.call;
+package com.wwang.model.call;
 
 public class Teacher implements Callback {
 	private Student student;

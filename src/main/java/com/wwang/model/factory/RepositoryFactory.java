@@ -1,4 +1,4 @@
-package com.wwang.factory;
+package com.wwang.model.factory;
 
 /**
  * 简单工厂

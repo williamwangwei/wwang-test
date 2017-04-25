@@ -1,4 +1,4 @@
-package com.wwang.decorate;
+package com.wwang.model.decorate;
 
 /**
  * 查询接口，有简单查询和缓存查询

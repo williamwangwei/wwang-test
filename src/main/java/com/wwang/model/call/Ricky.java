@@ -1,4 +1,4 @@
-package com.wwang.call;
+package com.wwang.model.call;
 
 /**
  *  一个名叫Ricky的同学解决老师提出的问题

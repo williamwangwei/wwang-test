@@ -1,4 +1,4 @@
-package com.wwang.decorate;
+package com.wwang.model.decorate;
 
 import java.util.HashMap;
 import java.util.Map;

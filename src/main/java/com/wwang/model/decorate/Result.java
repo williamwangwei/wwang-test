@@ -1,4 +1,4 @@
-package com.wwang.decorate;
+package com.wwang.model.decorate;
 
 //查询结果类，相当于一个domain
 public class Result {
