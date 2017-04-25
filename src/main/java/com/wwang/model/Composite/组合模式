@@ -1,0 +1,4 @@
+组合模式经常跟策略模式配合使用，用来组合所有的策略，并遍历这些策略找出满足条件的策略。
+之前写过一篇SpringMVC关于json、xml自动转换的原理研究文章，
+里面springmvc把返回的返回值映射给用户的response做了一层抽象，封装到了HandlerMethodReturnValueHandler策略接口中。
+
